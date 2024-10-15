@@ -1,0 +1,15 @@
+---
+interface Props {
+  className?: string;
+}
+
+const baseClass =
+  "rounded-full bg-black uppercase text-xs text-white flex font-medium items-center justify-center gap-2 px-6 py-2 w-fit";
+
+// Props Destructuring
+const { className } = Astro.props;
+---
+
+<span class:list={[baseClass, className]}>
+  <slot />
+</span>
