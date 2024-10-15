@@ -1,0 +1,86 @@
+---
+import Image from "astro/components/Image.astro";
+import type { ImageMetadata } from "astro";
+import Button from "../ui/button.astro";
+import clsx from "clsx";
+
+interface Props {
+  reversed?: boolean;
+  name: string;
+  description: string;
+  myRole: string;
+  technologies: { icon: ImageMetadata; name: string; url: string }[];
+  image: ImageMetadata;
+  color: string;
+  referance: {
+    name: string;
+    url: string;
+  };
+}
+
+const {
+  name,
+  description,
+  myRole,
+  technologies,
+  image,
+  color,
+  referance,
+  reversed,
+} = Astro.props;
+---
+
+<div class="grid grid-cols-2 gap-12">
+  <div
+    style=`background-color: ${color}`
+    class={clsx("rounded-3xl h-full overflow-hidden", {
+      "order-2": reversed,
+    })}
+  >
+    <Image
+      src={image}
+      alt={name}
+      class="rounded-3xl w-full h-full object-cover relative top-10 left-10"
+    />
+  </div>
+
+  <div
+    class={clsx("py-6 space-y-6 text-start", {
+      "order-1": reversed,
+    })}
+  >
+    <!-- Project Info -->
+    <div class="space-y-3">
+      <h3 class="text-2xl font-bold text-black">{name}</h3>
+      <p class="text-gray-500 text-lg">{description}</p>
+    </div>
+
+    <!-- My role in this project -->
+    <div class="space-y-3">
+      <h3 class="text-lg font-semibold text-black">My Role in This Project</h3>
+      <p class="text-gray-500 text-lg">{myRole}</p>
+    </div>
+
+    <div class="flex items-end justify-between gap-6">
+      <!-- Technologies used in this project -->
+      <div class="flex gap-2 items-center">
+        {
+          technologies.map((tech) => (
+            <Button size="largeIcon" variant="secondary" href={tech.url}>
+              <Image src={tech.icon} alt={tech.name} class="size-6" />
+            </Button>
+          ))
+        }
+      </div>
+
+      <!-- Referance -->
+      <div>
+        <span class="text-gray-500 mr-1">Ref:</span>
+        <a
+          class="text-blue-500 font-medium underline hover:text-blue-600 duration-200"
+          href={referance.url}>{referance.name}</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
