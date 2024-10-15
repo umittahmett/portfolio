@@ -1,0 +1,40 @@
+---
+import Image from "astro/components/Image.astro";
+import type { ImageMetadata } from "astro";
+import DotsLight from "../../assets/images/dots-light.svg";
+import DotsDark from "../../assets/images/dots-dark.svg";
+import clsx from "clsx";
+
+interface Props {
+  name: string;
+  icon: ImageMetadata;
+  since: string;
+  className?: string;
+}
+
+const { name, icon, since, className } = Astro.props;
+---
+
+<div
+  class={clsx(
+    "p-6 rounded-3xl bg-[#F5F7FA] border-[#E6E9F0] border w-full group relative overflow-hidden cursor-pointer",
+    className
+  )}
+>
+  <div
+    class="flex relative z-20 items-center justify-between gap-6 font-semibold text-sm text-black"
+  >
+    <span>Since {name}</span>
+    <span>Since {since}</span>
+  </div>
+  <Image
+    src={icon}
+    alt={name}
+    class="h-32 w-auto mx-auto mt-12 mb-6 z-20 relative"
+  />
+  <div
+    class="group-hover:opacity-100 duration-200 ease-in opacity-0 absolute top-0 right-0 bg-[#F5F7FA] rounded-tr-3xl h-full w-1/2 bg-gradient-to-tr via-[#F5F7FA] from-[#F5F7FA] to-gray-200"
+  >
+    <Image src={DotsLight} alt="dots" class="left-0 w-full" />
+  </div>
+</div>
