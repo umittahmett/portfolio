@@ -22,18 +22,18 @@ const { name, icon, since, className } = Astro.props;
   )}
 >
   <div
-    class="flex relative z-20 items-center justify-between gap-6 font-semibold text-sm text-black"
+    class="flex relative max-sm:flex-col max-sm:items-start z-20 items-center justify-between sm:gap-6 font-semibold text-sm text-black"
   >
-    <span>Since {name}</span>
-    <span>Since {since}</span>
+    <span class="text-lg">{name}</span>
+    <span class="text-gray-700">Since {since}</span>
   </div>
   <Image
     src={icon}
     alt={name}
-    class="h-32 w-auto mx-auto mt-12 mb-6 z-20 relative"
+    class="sm:h-28 h-16 w-auto mx-auto mt-6 sm:mt-12 sm:mb-6 z-20 relative"
   />
   <div
-    class="group-hover:opacity-100 duration-200 ease-in opacity-0 absolute top-0 right-0 bg-[#F5F7FA] rounded-tr-3xl h-full w-1/2 bg-gradient-to-tr via-[#F5F7FA] from-[#F5F7FA] to-gray-200"
+    class="duration-200 ease-in absolute top-0 right-0 bg-[#F5F7FA] rounded-tr-3xl h-full w-1/2 bg-gradient-to-tr via-[#F5F7FA] from-[#F5F7FA] to-gray-200"
   >
     <Image src={DotsLight} alt="dots" class="left-0 w-full" />
   </div>

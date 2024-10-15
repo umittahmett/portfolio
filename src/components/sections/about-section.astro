@@ -4,7 +4,9 @@ import Heading from "../heading.astro";
 import ExampleImage from "../../assets/images/example-image.jpeg";
 ---
 
-<div class="grid grid-cols-2 gap-6 pb-16 pt-32 default-container">
+<div
+  class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-16 pt-32 default-container"
+>
   <Heading
     textAlignment="start"
     title="Who Am I?"
@@ -13,7 +15,7 @@ import ExampleImage from "../../assets/images/example-image.jpeg";
   />
 
   <div
-    class="grid grid-cols-3 col-span-1 flex-shrink-0 h-[500px] grid-rows-3 gap-6"
+    class="grid grid-cols-3 col-span-1 flex-shrink-0 max-sm:aspect-[4/4] sm:h-[400px] md:h-[450px] grid-rows-3 gap-6"
   >
     <Image
       src={ExampleImage}

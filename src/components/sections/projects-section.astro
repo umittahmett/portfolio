@@ -1,7 +1,9 @@
 ---
+import { ArrowUpRight } from "lucide-astro";
 import { projects } from "../../data/index";
 import ProjectCard from "../cards/project-card.astro";
 import Heading from "../heading.astro";
+import Button from "../ui/button.astro";
 ---
 
 <div class="space-y-16 w-full py-16 default-container">
@@ -15,4 +17,10 @@ import Heading from "../heading.astro";
       <ProjectCard {...item} reversed={index % 2 == 1} />
     ))
   }
+
+  <div class="flex justify-center">
+    <Button href="/projects">
+      View All Projects <ArrowUpRight class="size-5" />
+    </Button>
+  </div>
 </div>

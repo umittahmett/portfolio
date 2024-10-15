@@ -30,23 +30,23 @@ const {
 } = Astro.props;
 ---
 
-<div class="grid grid-cols-2 gap-12">
+<div class="grid lg:grid-cols-2 lg:gap-12">
   <div
     style=`background-color: ${color}`
-    class={clsx("rounded-3xl h-full overflow-hidden", {
-      "order-2": reversed,
+    class={clsx("rounded-3xl h-full overflow-hidden max-w-2xl", {
+      "lg:order-2": reversed,
     })}
   >
     <Image
       src={image}
       alt={name}
-      class="rounded-3xl w-full h-full object-cover relative top-10 left-10"
+      class="rounded-3xl w-full h-full object-cover object-left-top relative top-10 left-10"
     />
   </div>
 
   <div
     class={clsx("py-6 space-y-6 text-start", {
-      "order-1": reversed,
+      "lg:order-1": reversed,
     })}
   >
     <!-- Project Info -->
