@@ -1,0 +1,182 @@
+import PromeSolutionsImage from "../assets/images/projects/prome-solutions.png";
+import UydudaImage from "../assets/images/projects/uyduda.png";
+import SiliconBriteImage from "../assets/images/projects/silicon-brite.png";
+import BookStoreImage from "../assets/images/projects/book-store.png";
+import React from "../assets/images/technologies/react.svg";
+import Next from "../assets/images/technologies/next.svg";
+import Tailwind from "../assets/images/technologies/tailwind.svg";
+import Astro from "../assets/images/technologies/astro.svg";
+import Remix from "../assets/images/technologies/remix.svg";
+import MongoDb from "../assets/images/technologies/mongodb.svg";
+import { Mail, Github, Instagram, Linkedin, Twitter } from "lucide-astro";
+
+
+export const projects = [
+  {
+    name: "Silicon Brite",
+    description:
+      "SiliconBrite Technologies is a semiconductor company founded in 2018. It specializes in energy management and voltage protection with analog and mixed signal solutions, providing reliable protection to electronic devices",
+    myRole:
+      "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
+      technologies: [
+        {
+          icon: Astro,
+          name: "Astro.JS",
+          url: "https://astro.build",
+        },
+        {
+          icon: Tailwind,
+          name: "Tailwind css",
+          url: "https://tailwindcss.com",
+        },
+      ],
+    image: SiliconBriteImage,
+    color: "#f97316",
+    referance: {
+      name: "Kaan Ikizler",
+      url: "https://kaanikizler.com",
+    },
+  },
+  {
+    name: "Book Store",
+    description:
+      "As an e-commerce site focusing on book shopping, Book Store aims to bring different types of books together with readers. Users can review and easily purchase the books they want through the site.",
+    myRole:
+      "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
+    technologies: [
+      {
+        icon: Remix,
+        name: "Remix.JS",
+        url: "https://remix.run",
+      },
+      {
+        icon: MongoDb,
+        name: "MongoDB",
+        url: "https://www.mongodb.com",
+      },
+      {
+        icon: Tailwind,
+        name: "Tailwind css",
+        url: "https://tailwindcss.com",
+      },
+    ],
+    image: BookStoreImage,
+    color: "#f59e0b",
+    referance: {
+      name: "Umit Ahmet",
+      url: "https://umitahmed.com",
+    },
+  },
+  {
+    name: "Prome Solutions",
+    description:
+      "Prome Solutions is a technology company that offers solutions in areas such as artificial intelligence, web and mobile applications. While optimizing the operations of businesses with AI-based systems, it also aims to improve the customer experience with user-friendly designs and Shopify integrations.",
+    myRole:
+      "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
+    technologies: [
+      {
+        icon: Astro,
+        name: "Astro.JS",
+        url: "https://astro.build",
+      },
+      {
+        icon: Tailwind,
+        name: "Tailwind css",
+        url: "https://tailwindcss.com",
+      },
+    ],
+    image: PromeSolutionsImage,
+    color: "#2563eb",
+    referance: {
+      name: "Kaan Ikizler",
+      url: "https://promesolutions.com",
+    },
+  },
+ 
+  {
+    name: "Uyduda",
+    description:
+      "Uyduda operates as a brand that provides technical services in satellite and television systems such as satellite dish installation, central satellite systems and television installation.",
+    myRole:
+      "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
+    technologies: [
+      {
+        icon: Next,
+        name: "Next.JS",
+        url: "https://nextjs.org/",
+      },
+      {
+        icon: Tailwind,
+        name: "Tailwind css",
+        url: "https://tailwindcss.com",
+      },
+    ],
+    image: UydudaImage,
+    color: "#f59e0b",
+    referance: {
+      name: "Emre Kırca",
+      url: "https://emrekirca.com",
+    },
+  },
+]
+
+export const technologies = [
+  {
+    name: "React",
+    icon: React,
+    url: "https://reactjs.org",
+    since: "Februar 2023",
+  },
+  {
+    name: "Next.JS",
+    icon: Next,
+    url: "https://nextjs.org",
+    since: "November 2023",
+  },
+  {
+    name: "Remix.JS",
+    icon: Remix,
+    url: "https://remix.run",
+    since: "July 2024",
+  },
+  {
+    name: "Astro.JS",
+    icon: Astro,
+    url: "https://astro.build",
+    since: "Februar 2024",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: Tailwind,
+    url: "https://tailwindcss.com",
+    since: "June 2023",
+  },
+];
+
+export const contactLinks = [
+  {
+    name: "Linkedin",
+    url: "https://www.linkedin.com/in/%C3%BCmit-ahmet-a5843027a/",
+    icon: Linkedin,
+  },
+  {
+    name: "Github",
+    url: 'https://github.com/umittahmett',
+    icon: Github,
+  },
+  {
+    name: "Instagram",
+    url: 'https://instagram.com/umittahmett',
+    icon: Instagram,
+  },
+  {
+    name: "Twitter",
+    url: 'https://x.com/umitahmed_',
+    icon: Twitter,
+  },
+  {
+    name: "Email",
+    url: "mailto:umitahmet20@gmail.com",
+    icon: Mail,
+  },
+];
