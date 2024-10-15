@@ -1,0 +1,35 @@
+---
+import Tag from "./ui/tag.astro";
+import clsx from "clsx";
+
+interface Props {
+  tag: string;
+  title: string;
+  description: string;
+  textAlignment?: "start" | "center";
+}
+
+const { title, description, tag, textAlignment = "center" } = Astro.props;
+---
+
+<div
+  class={clsx("space-y-4 text-center", {
+    "text-start": textAlignment === "start",
+    "text-center max-w-2xl mx-auto": textAlignment === "center",
+  })}
+>
+  <Tag
+    className={clsx({
+      "mx-auto": textAlignment === "center",
+      "mr-auto": textAlignment === "start",
+    })}
+  >
+    {tag}
+  </Tag>
+  <h2 class="text-5xl font-semibold leading-[48px] text-black">
+    {title}
+  </h2>
+  <p class="text-gray-500 text-lg">
+    {description}
+  </p>
+</div>
