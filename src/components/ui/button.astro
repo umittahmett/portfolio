@@ -1,0 +1,53 @@
+---
+interface Props {
+  variant?: "default" | "secondary";
+  size?: "default" | "icon" | "largeIcon";
+  onclick?: string;
+  href?: string;
+  type?: "button" | "submit" | "reset";
+  className?: string;
+  ariaLabel?: string;
+}
+
+// Tailwind CSS classes
+const buttonVariants = {
+  default: "bg-black text-white",
+  secondary: "bg-gray-100 hover:bg-gray-200 text-black",
+};
+
+const buttonSizes = {
+  default: "px-6 py-2.5 text-base w-fit",
+  icon: "w-8 h-8",
+  largeIcon: "w-12 h-12",
+};
+
+const baseClass =
+  "rounded-full flex font-medium items-center justify-center gap-2 duration-200";
+// Props Destructuring
+const {
+  variant = "default",
+  size = "default",
+  type,
+  onclick,
+  href,
+  className,
+  ariaLabel,
+} = Astro.props;
+
+// Component Creation
+const Element = href ? "a" : "button";
+const attributes = href ? { href } : { type, onclick };
+---
+
+<Element
+  aria-label={ariaLabel}
+  class:list={[
+    baseClass,
+    buttonVariants[variant],
+    buttonSizes[size],
+    className,
+  ]}
+  {...attributes}
+>
+  <slot />
+</Element>
