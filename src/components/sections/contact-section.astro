@@ -1,0 +1,25 @@
+---
+import clsx from "clsx";
+import { contactLinks, technologies } from "../../data/index";
+import TechnologyCard from "../cards/technology-card.astro";
+import Heading from "../heading.astro";
+import Button from "../ui/button.astro";
+---
+
+<div class="space-y-4 w-full py-16 default-container">
+  <Heading
+    title="Get in Touch."
+    description="Feel free to contact me for any questions or cooperation!"
+    tag="Contact"
+  />
+
+  <div class="flex items-center justify-center gap-3">
+    {
+      contactLinks.map((item) => (
+        <Button size="icon" href={item.url}>
+          {<item.icon class="size-4 text-white" />}
+        </Button>
+      ))
+    }
+  </div>
+</div>
