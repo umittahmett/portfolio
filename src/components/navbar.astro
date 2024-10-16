@@ -2,10 +2,10 @@
 import Image from "astro/components/Image.astro";
 import BlackLogo from "../assets/images/black-logo.svg";
 import WhiteLogo from "../assets/images/white-logo.svg";
-import { Download, Menu, X } from "lucide-astro";
 import Button from "./ui/button.astro";
 import ToggleTheme from "./ui/toggle-theme.astro";
 import { navbarNavigation } from "../data";
+import { Icon } from "astro-icon/components";
 ---
 
 <div
@@ -36,23 +36,27 @@ import { navbarNavigation } from "../data";
         <template x-for="(item, index) in navbarNavigation" :key="index">
           <a
             :href="item.href"
-            class="dark:text-white text-black font-medium hover:text-zinc-300 duration-200"
+            class="dark:text-white hover:text-zinc-500 text-black font-medium dark:hover:text-zinc-300 duration-200"
             x-text="item.name"
           >
           </a>
         </template>
       </div>
 
-      <div class="ml-auto flex items-center justify-end gap-6">
+      <div class="ml-auto flex items-center justify-end gap-3">
+        <Button className="max-lg:hidden">
+          Download CV <Icon name="download" class="size-4" />
+        </Button>
         <ToggleTheme />
-
         <!-- Toggle Menu Button -->
         <button class="hidden max-md:block" @click="showMenu = !showMenu">
-          <Menu
+          <Icon
+            name="menu"
             x-show="showMenu == false"
             class="size-6 text-black dark:text-white"
           />
-          <X
+          <Icon
+            name="x"
             x-show="showMenu == true"
             class="size-6 text-black dark:text-white"
           />
@@ -60,7 +64,6 @@ import { navbarNavigation } from "../data";
       </div>
     </nav>
   </div>
-
   <!-- Mobile Menu -->
   <div
     x-show="showMenu"
@@ -72,7 +75,7 @@ import { navbarNavigation } from "../data";
     x-transition:leave-end="transform translate-x-full"
     x-init="$watch('showMenu', value => document.body.classList.toggle('overflow-hidden', value))"
     @click.away="showMenu = false"
-    class="fixed top-24 z-50 right-0 max-w-[65%] h-full bg-white dark:bg-black border-b border-zinc-900 w-full"
+    class="fixed top-24 z-50 right-0 border-l max-w-[65%] h-full bg-white dark:bg-black border-b border-zinc-100 dark:border-zinc-900 w-full"
   >
     <div
       class="flex items-start w-full divide-y divide-zinc-100 dark:divide-zinc-900 flex-col justify-center *:py-4"
@@ -90,7 +93,7 @@ import { navbarNavigation } from "../data";
 
       <div class="px-6 w-full">
         <Button variant="secondary" className="w-full">
-          Download CV <Download class="size-4" />
+          Download CV <Icon name="download" class="size-4" />
         </Button>
       </div>
     </div>
