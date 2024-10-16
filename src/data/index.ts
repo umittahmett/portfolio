@@ -2,13 +2,6 @@ import PromeSolutionsImage from "../assets/images/projects/prome-solutions.webp"
 import UydudaImage from "../assets/images/projects/uyduda.webp";
 import SiliconBriteImage from "../assets/images/projects/silicon-brite.webp";
 import BookStoreImage from "../assets/images/projects/book-store.webp";
-import React from "../assets/images/technologies/react.svg";
-import Next from "../assets/images/technologies/next.svg";
-import Tailwind from "../assets/images/technologies/tailwind.svg";
-import Astro from "../assets/images/technologies/astro.svg";
-import Remix from "../assets/images/technologies/remix.svg";
-import MongoDb from "../assets/images/technologies/mongodb.svg";
-import { Mail, Github, Instagram, Linkedin, Twitter } from "lucide-astro";
 
 
 export const projects = [
@@ -20,12 +13,12 @@ export const projects = [
       "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
       technologies: [
         {
-          icon: Astro,
+          icon: 'astro',
           name: "Astro.JS",
           url: "https://astro.build",
         },
         {
-          icon: Tailwind,
+          icon: 'tailwind',
           name: "Tailwind css",
           url: "https://tailwindcss.com",
         },
@@ -45,17 +38,17 @@ export const projects = [
       "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
     technologies: [
       {
-        icon: Remix,
+        icon: 'remix',
         name: "Remix.JS",
         url: "https://remix.run",
       },
       {
-        icon: MongoDb,
+        icon: 'mongodb',
         name: "MongoDB",
         url: "https://www.mongodb.com",
       },
       {
-        icon: Tailwind,
+        icon: 'tailwind',
         name: "Tailwind css",
         url: "https://tailwindcss.com",
       },
@@ -75,12 +68,12 @@ export const projects = [
       "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
     technologies: [
       {
-        icon: Astro,
+        icon: 'astro',
         name: "Astro.JS",
         url: "https://astro.build",
       },
       {
-        icon: Tailwind,
+        icon: 'tailwind',
         name: "Tailwind css",
         url: "https://tailwindcss.com",
       },
@@ -101,12 +94,12 @@ export const projects = [
       "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
     technologies: [
       {
-        icon: Next,
+        icon: 'next',
         name: "Next.JS",
         url: "https://nextjs.org/",
       },
       {
-        icon: Tailwind,
+        icon: 'tailwind',
         name: "Tailwind css",
         url: "https://tailwindcss.com",
       },
@@ -123,31 +116,31 @@ export const projects = [
 export const technologies = [
   {
     name: "React",
-    icon: React,
+    icon: 'react',
     url: "https://reactjs.org",
     since: "Februar 2023",
   },
   {
     name: "Next.JS",
-    icon: Next,
+    icon: 'next',
     url: "https://nextjs.org",
     since: "November 2023",
   },
   {
     name: "Remix.JS",
-    icon: Remix,
+    icon: 'remix',
     url: "https://remix.run",
     since: "July 2024",
   },
   {
     name: "Astro.JS",
-    icon: Astro,
+    icon: 'astro',
     url: "https://astro.build",
     since: "Februar 2024",
   },
   {
     name: "Tailwind CSS",
-    icon: Tailwind,
+    icon: 'tailwind',
     url: "https://tailwindcss.com",
     since: "June 2023",
   },
@@ -157,26 +150,33 @@ export const contactLinks = [
   {
     name: "Linkedin",
     url: "https://www.linkedin.com/in/%C3%BCmit-ahmet-a5843027a/",
-    icon: Linkedin,
+    icon: 'linkedin',
   },
   {
     name: "Github",
     url: 'https://github.com/umittahmett',
-    icon: Github,
+    icon: 'github',
   },
   {
     name: "Instagram",
     url: 'https://instagram.com/umittahmett',
-    icon: Instagram,
+    icon: 'instagram',
   },
   {
     name: "Twitter",
     url: 'https://x.com/umitahmed_',
-    icon: Twitter,
+    icon: 'twitter',
   },
   {
     name: "Email",
     url: "mailto:umitahmet20@gmail.com",
-    icon: Mail,
+    icon: 'mail',
   },
+];
+
+export const navbarNavigation = [
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Technologies", href: "#technologies" },
+  { name: "Contact", href: "#contact" },
 ];
