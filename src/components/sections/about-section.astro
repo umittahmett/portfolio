@@ -2,6 +2,10 @@
 import Image from "astro/components/Image.astro";
 import Heading from "../heading.astro";
 import ExampleImage from "../../assets/images/example-image.jpeg";
+import CodeImage from "@assets/images/about/code.webp";
+import Connections from "@assets/images/about/connections.webp";
+import Creativity from "@assets/images/about/creativity.webp";
+import Comfort from "@assets/images/about/comfort.webp";
 ---
 
 <section
@@ -19,22 +23,22 @@ import ExampleImage from "../../assets/images/example-image.jpeg";
     class="grid grid-cols-3 col-span-1 flex-shrink-0 max-sm:aspect-[4/4] sm:h-[400px] md:h-[500px] grid-rows-3 gap-3 sm:gap-6"
   >
     <Image
-      src={ExampleImage}
+      src={Connections}
       alt="About Image 1"
       class="col-span-2 row-span-1 rounded-3xl max-sm:rounded-xl w-full h-full object-cover"
     />
     <Image
-      src={ExampleImage}
+      src={Creativity}
       alt="About Image 1"
       class="col-span-1 row-span-2 rounded-3xl max-sm:rounded-xl w-full h-full object-cover"
     />
     <Image
-      src={ExampleImage}
+      src={Comfort}
       alt="About Image 1"
       class="col-span-2 row-span-2 rounded-3xl max-sm:rounded-xl w-full h-full object-cover"
     />
     <Image
-      src={ExampleImage}
+      src={CodeImage}
       alt="About Image 1"
       class="col-span-1 row-span-1 rounded-3xl max-sm:rounded-xl w-full h-full object-cover"
     />
