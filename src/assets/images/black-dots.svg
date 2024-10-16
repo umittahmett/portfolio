@@ -1,5 +1,5 @@
 <svg width="400" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f_90_10913)">
+<g filter="url(#filter0_f_90_9201)">
 <circle cx="350" cy="50" r="50" fill="white" fill-opacity="0.1"/>
 </g>
 <circle cx="2" cy="2" r="2" fill="#0F0F0F"/>
@@ -683,10 +683,10 @@
 <circle cx="386" cy="230" r="2" fill="#0F0F0F"/>
 <circle cx="398" cy="230" r="2" fill="#0F0F0F"/>
 <defs>
-<filter id="filter0_f_90_10913" x="220" y="-80" width="260" height="260" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_90_9201" x="220" y="-80" width="260" height="260" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur_90_10913"/>
+<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur_90_9201"/>
 </filter>
 </defs>
 </svg>
