@@ -1,0 +1,43 @@
+---
+import { Icon } from "astro-icon/components";
+import Button from "./ui/button.astro";
+import { Image } from "astro:assets";
+import Umit from "../assets/images/umit.png";
+import ScrollMoreButton from "./ui/scroll-more-button.astro";
+---
+
+<section
+  class="pt-10 sm:pt-24 border-b max-lg:flex-col border-zinc-100 dark:border-zinc-900 relative overflow-hidden mt-[90px] min-h-[60dvh] default-container flex justify-start"
+>
+  <div class="text-start">
+    <h1
+      class="text-5xl sm:text-7xl font-semibold dark:text-white text-black leading-[76px] mb-3"
+    >
+      Hi 👋🏻, I’m Ümit!
+    </h1>
+    <p class="text-zinc-500 text-lg dark:text-zinc-400 mb-6 max-w-2xl">
+      I'm a Frontend Developer crafting user-friendly, visually appealing, and
+      functional web interfaces. With modern technologies and innovative
+      solutions, I'm ready to bring your projects to life!
+    </p>
+    <Button>
+      Download CV <Icon name="download" class="size-4" />
+    </Button>
+  </div>
+
+  <div class="relative">
+    <Image
+      src={Umit}
+      alt="hero-image"
+      class="w-full max-lg:max-w-lg lg:min-w-[500px] relative max-lg:mx-auto max-lg:mt-10 lg:right-20"
+    />
+    <div
+      class="w-full h-full bg-gradient-to-b from-transparent via-transparent dark:to-black to-white absolute top-0 sm:right-20"
+    >
+    </div>
+  </div>
+
+  <div class="absolute right-3 bottom-3 sm:bottom-10 sm:right-10">
+    <ScrollMoreButton />
+  </div>
+</section>
