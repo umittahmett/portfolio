@@ -4,9 +4,10 @@ import { contactLinks, technologies } from "../../data/index";
 import TechnologyCard from "../cards/technology-card.astro";
 import Heading from "../heading.astro";
 import Button from "../ui/button.astro";
+import { Icon } from "astro-icon/components";
 ---
 
-<div class="space-y-4 w-full py-16 default-container">
+<section id="contact" class="space-y-4 w-full py-16 default-container">
   <Heading
     title="Get in Touch."
     description="Feel free to contact me for any questions or cooperation!"
@@ -17,9 +18,9 @@ import Button from "../ui/button.astro";
     {
       contactLinks.map((item) => (
         <Button size="icon" href={item.url}>
-          {<item.icon class="size-4 text-white" />}
+          <Icon name={item.icon} class="size-4 dark:text-black text-white" />
         </Button>
       ))
     }
   </div>
-</div>
+</section>

@@ -1,0 +1,50 @@
+---
+import { Moon, Sun } from "lucide-astro";
+---
+
+<button
+  aria-label="Toggle theme"
+  class="group flex size-10 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 duration-200 items-center justify-center"
+  x-data="themeToggle()"
+  x-init="init()"
+  @click="toggleTheme()"
+>
+  <p class="hidden dark:block">
+    <Sun class="size-5 text-white" />
+  </p>
+  <p class="dark:hidden">
+    <Moon class="size-5 text-black" />
+  </p>
+</button>
+
+<script>
+  import Alpine from "alpinejs";
+
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("themeToggle", () => ({
+      init() {
+        this.setTheme();
+      },
+      setTheme() {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      },
+      toggleTheme() {
+        if (document.documentElement.classList.contains("dark")) {
+          document.documentElement.classList.remove("dark");
+          localStorage.theme = "light";
+        } else {
+          document.documentElement.classList.add("dark");
+          localStorage.theme = "dark";
+        }
+      },
+    }));
+  });
+</script>

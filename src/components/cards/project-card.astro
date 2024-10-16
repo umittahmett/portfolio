@@ -3,6 +3,7 @@ import Image from "astro/components/Image.astro";
 import type { ImageMetadata } from "astro";
 import Button from "../ui/button.astro";
 import clsx from "clsx";
+import { Icon } from "astro-icon/components";
 
 interface Props {
   reversed?: boolean;
@@ -33,14 +34,17 @@ const {
 <div class="grid lg:grid-cols-2 lg:gap-12">
   <div
     style=`background-color: ${color}`
-    class={clsx("rounded-3xl h-full overflow-hidden max-w-2xl", {
-      "lg:order-2": reversed,
-    })}
+    class={clsx(
+      "rounded-3xl max-sm:rounded-xl h-full overflow-hidden max-w-2xl",
+      {
+        "lg:order-2": reversed,
+      }
+    )}
   >
     <Image
       src={image}
       alt={name}
-      class="rounded-3xl w-full h-full object-cover object-left-top relative top-10 left-10"
+      class="rounded-3xl max-sm:rounded-xl w-full h-full object-cover object-left-top relative sm:top-10 sm:left-10 top-6 left-6"
     />
   </div>
 
@@ -51,14 +55,16 @@ const {
   >
     <!-- Project Info -->
     <div class="space-y-3">
-      <h3 class="text-2xl font-bold text-black">{name}</h3>
-      <p class="text-gray-500 text-lg">{description}</p>
+      <h3 class="text-2xl font-bold dark:text-white text-black">{name}</h3>
+      <p class="dark:text-zinc-400 text-zinc-500 text-lg">{description}</p>
     </div>
 
     <!-- My role in this project -->
     <div class="space-y-3">
-      <h3 class="text-lg font-semibold text-black">My Role in This Project</h3>
-      <p class="text-gray-500 text-lg">{myRole}</p>
+      <h3 class="text-lg font-semibold dark:text-white text-black">
+        My Role in This Project
+      </h3>
+      <p class="dark:text-zinc-400 text-zinc-500 text-lg">{myRole}</p>
     </div>
 
     <div class="flex items-end justify-between gap-6">
@@ -67,7 +73,7 @@ const {
         {
           technologies.map((tech) => (
             <Button size="largeIcon" variant="secondary" href={tech.url}>
-              <Image src={tech.icon} alt={tech.name} class="size-6" />
+              <Icon name={tech.icon} class="size-6 " />
             </Button>
           ))
         }
@@ -75,7 +81,7 @@ const {
 
       <!-- Referance -->
       <div>
-        <span class="text-gray-500 mr-1">Ref:</span>
+        <span class="dark:text-zinc-400 text-zinc-500 mr-1">Ref:</span>
         <a
           class="text-blue-500 font-medium underline hover:text-blue-600 duration-200"
           href={referance.url}>{referance.name}</a

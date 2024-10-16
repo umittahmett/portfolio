@@ -1,6 +1,6 @@
 ---
 interface Props {
-  variant?: "default" | "secondary";
+  variant?: "default" | "secondary" | "outline";
   size?: "default" | "icon" | "largeIcon";
   onclick?: string;
   href?: string;
@@ -11,8 +11,10 @@ interface Props {
 
 // Tailwind CSS classes
 const buttonVariants = {
-  default: "bg-black text-white",
-  secondary: "bg-gray-100 hover:bg-gray-200 text-black",
+  default: "bg-black dark:bg-white dark:text-black text-white",
+  secondary: "bg-zinc-100 hover:bg-zinc-200 text-black",
+  outline:
+    "bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-900 text-black dark:text-white border border-zinc-200 dark:border-zinc-800",
 };
 
 const buttonSizes = {

@@ -4,10 +4,12 @@ import AboutSection from "../components/sections/about-section.astro";
 import ProjectsSection from "../components/sections/projects-section.astro";
 import TechnologiesSection from "../components/sections/technologies-section.astro";
 import ContactSection from "../components/sections/contact-section.astro";
+import Navbar from "../components/navbar.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <div>
+  <div class="bg-white dark:bg-black duration-200">
+    <Navbar />
     <AboutSection />
     <ProjectsSection />
     <TechnologiesSection />

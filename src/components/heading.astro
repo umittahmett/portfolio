@@ -14,22 +14,22 @@ const { title, description, tag, textAlignment = "center" } = Astro.props;
 
 <div
   class={clsx("space-y-4 text-center", {
-    "text-start": textAlignment === "start",
+    "sm:text-start": textAlignment === "start",
     "text-center max-w-2xl mx-auto": textAlignment === "center",
   })}
 >
   <Tag
     className={clsx({
       "mx-auto": textAlignment === "center",
-      "mr-auto": textAlignment === "start",
+      "sm:mr-auto max-sm:mx-auto": textAlignment === "start",
     })}
   >
     {tag}
   </Tag>
-  <h2 class="text-5xl font-semibold leading-[48px] text-black">
+  <h2 class="text-5xl font-semibold leading-[48px] dark:text-white text-black">
     {title}
   </h2>
-  <p class="text-gray-500 text-lg">
+  <p class="dark:text-zinc-400 text-zinc-500 text-lg">
     {description}
   </p>
 </div>
