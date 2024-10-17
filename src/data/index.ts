@@ -29,6 +29,8 @@ export const projects = [
       name: "Kaan Ikizler",
       url: "https://kaanikizler.com",
     },
+    pageSpeedLink: "https://pagespeed.web.dev/report?url=https://siliconbrite.com",
+    websiteLink: "https://siliconbrite.com",
   },
   {
     name: "Book Store",
@@ -59,6 +61,8 @@ export const projects = [
       name: "Umit Ahmet",
       url: "https://umitahmed.com",
     },
+    pageSpeedLink: "https://pagespeed.web.dev/report?url=https://remix-bookstore.vercel.app/",
+    websiteLink: "https://remix-bookstore.vercel.app/",
   },
   {
     name: "Prome Solutions",
@@ -84,6 +88,8 @@ export const projects = [
       name: "Kaan Ikizler",
       url: "https://promesolutions.com",
     },
+    pageSpeedLink: "https://pagespeed.web.dev/report?url=https://promesolutions.com/",
+    websiteLink: "https://promesolutions.com/",
   },
  
   {
@@ -110,6 +116,8 @@ export const projects = [
       name: "Emre Kırca",
       url: "https://emrekirca.com",
     },
+    pageSpeedLink: "https://pagespeed.web.dev/report?url=https://uyduda.com/",
+    websiteLink: "https://uyduda.com/",
   },
 ]
 
