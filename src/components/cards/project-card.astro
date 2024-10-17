@@ -17,6 +17,8 @@ interface Props {
     name: string;
     url: string;
   };
+  websiteLink?: string;
+  pageSpeedLink?: string;
 }
 
 const {
@@ -28,11 +30,15 @@ const {
   color,
   referance,
   reversed,
+  pageSpeedLink,
+  websiteLink,
 } = Astro.props;
 ---
 
 <div class="grid lg:grid-cols-2 lg:gap-12">
-  <div
+  <a
+    href={websiteLink}
+    target="_blank"
     style=`background-color: ${color}`
     class={clsx(
       "rounded-3xl max-sm:rounded-xl h-full overflow-hidden max-w-2xl",
@@ -46,10 +52,10 @@ const {
       alt={name}
       class="rounded-3xl max-sm:rounded-xl w-full h-full object-cover object-left-top relative sm:top-10 sm:left-10 top-6 left-6"
     />
-  </div>
+  </a>
 
   <div
-    class={clsx("py-6 space-y-6 text-start", {
+    class={clsx("max-lg:pt-6 space-y-6 text-start", {
       "lg:order-1": reversed,
     })}
   >
@@ -67,7 +73,7 @@ const {
       <p class="dark:text-zinc-400 text-zinc-500 text-lg">{myRole}</p>
     </div>
 
-    <div class="flex items-end justify-between gap-6">
+    <div class="flex items-center justify-between gap-6">
       <!-- Technologies used in this project -->
       <div class="flex gap-2 items-center">
         {
@@ -88,5 +94,14 @@ const {
         >
       </div>
     </div>
+    {
+      pageSpeedLink && (
+        <Button href={pageSpeedLink} variant="outline">
+          <Icon name="page-speed" class="size-5 rounded-md" />
+          Check Page Speed
+          <Icon name="arrow-up-right" />
+        </Button>
+      )
+    }
   </div>
 </div>
