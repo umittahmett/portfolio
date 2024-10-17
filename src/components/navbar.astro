@@ -49,7 +49,10 @@ import { Icon } from "astro-icon/components";
         </Button>
         <ToggleTheme />
         <!-- Toggle Menu Button -->
-        <button class="hidden max-md:block" @click="showMenu = !showMenu">
+        <button
+          class="hidden max-md:flex hover:bg-zinc-100 dark:hover:bg-zinc-900 duration-200 rounded-lg size-10 items-center justify-center"
+          @click="showMenu = !showMenu"
+        >
           <Icon
             name="menu"
             x-show="showMenu == false"
