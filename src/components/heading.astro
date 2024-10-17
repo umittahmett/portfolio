@@ -19,14 +19,16 @@ const { title, description, tag, textAlignment = "center" } = Astro.props;
   })}
 >
   <Tag
-    className={clsx({
+    className={clsx("split-text gap-0.5", {
       "mx-auto": textAlignment === "center",
       "sm:mr-auto max-sm:mx-auto": textAlignment === "start",
     })}
   >
     {tag}
   </Tag>
-  <h2 class="text-5xl font-semibold leading-[48px] dark:text-white text-black">
+  <h2
+    class="text-5xl pb-2 split-text font-semibold leading-[48px] dark:text-white text-black"
+  >
     {title}
   </h2>
   <p class="dark:text-zinc-400 text-zinc-500 text-lg">
