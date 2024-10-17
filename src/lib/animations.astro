@@ -1,0 +1,59 @@
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  const headings = document.querySelectorAll(".split-text");
+
+  headings.forEach((heading: any) => {
+    heading.style.overflow = "hidden";
+    const text = heading.innerText;
+
+    const segmenter = new Intl.Segmenter();
+    const graphemes = Array.from(
+      segmenter.segment(text),
+      (segment) => segment.segment
+    );
+
+    const splitText = graphemes
+      .map((char) => {
+        if (char === " ") {
+          return `<span class="char inline-block" style="display: inline-block;">&nbsp;</span>`;
+        } else {
+          return `<span class="char inline-block" style="display: inline-block;">${char}</span>`;
+        }
+      })
+      .join("");
+
+    heading.innerHTML = splitText;
+
+    gsap.from(heading.querySelectorAll(".char"), {
+      y: 130,
+      stagger: 0.01,
+      ease: "out",
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: heading,
+        start: "top 100%",
+        end: "bottom 20%",
+      },
+    });
+  });
+
+  const containers = document.querySelectorAll(".text-container");
+  containers.forEach((container) => {
+    gsap.from(container.querySelectorAll(".text-item"), {
+      y: 10,
+      opacity: 0,
+      duration: 0.25,
+      stagger: 0.09,
+      ease: "in",
+      scrollTrigger: {
+        trigger: container,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none play",
+      },
+    });
+  });
+</script>
