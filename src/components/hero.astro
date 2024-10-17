@@ -7,12 +7,12 @@ import ScrollMoreButton from "./ui/scroll-more-button.astro";
 ---
 
 <section
-  class="hero pt-10 sm:pt-24 border-b max-lg:flex-col border-zinc-100 dark:border-zinc-900 relative overflow-hidden mt-[90px] min-h-[60dvh] default-container flex justify-start"
+  class="hero pt-10 sm:pt-24 border-b duration-200 max-lg:flex-col border-zinc-100 dark:border-zinc-900 relative overflow-hidden mt-[90px] min-h-[60dvh] default-container flex justify-start"
 >
-  <div class="text-start">
+  <div class="text-start max-sm:text-center">
     <div class="overflow-hidden w-fit text-white">
       <h1
-        class="text-5xl pt-2 split-text sm:text-7xl flex font-semibold leading-[75px] dark:text-white text-black mb-3"
+        class="text-6xl pt-2 split-text sm:text-7xl max-sm:text-center font-semibold leading-[75px] dark:text-white text-black mb-3"
       >
         Hi 👋🏻, I'm Ümit!
       </h1>
@@ -22,7 +22,7 @@ import ScrollMoreButton from "./ui/scroll-more-button.astro";
       functional web interfaces. With modern technologies and innovative
       solutions, I'm ready to bring your projects to life!
     </p>
-    <Button>
+    <Button className="max-sm:mx-auto">
       Download CV <Icon name="download" class="size-4" />
     </Button>
   </div>

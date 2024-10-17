@@ -13,3 +13,8 @@
     padding-right: 24px;
   }
 }
+
+.split-text {
+  white-space: normal; /* Kelimelerin doğru şekilde kırılması */
+  word-break: break-word; /* Uzun kelimelerin taşmaması için */
+}
