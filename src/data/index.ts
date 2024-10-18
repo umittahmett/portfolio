@@ -10,7 +10,7 @@ export const projects = [
     description:
       "SiliconBrite Technologies is a semiconductor company founded in 2018. It specializes in energy management and voltage protection with analog and mixed signal solutions, providing reliable protection to electronic devices",
     myRole:
-      "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
+      "While working at Promesolutions, I was responsible for completely designing and developing this website from the ground up. I focused on creating a user-friendly, high-performance site that aligned with the company's goals.",
       technologies: [
         {
           icon: 'astro',
@@ -25,19 +25,16 @@ export const projects = [
       ],
     image: SiliconBriteImage,
     color: "#f97316",
-    referance: {
-      name: "Kaan Ikizler",
-      url: "https://kaanikizler.com",
-    },
+    
     pageSpeedLink: "https://pagespeed.web.dev/report?url=https://siliconbrite.com",
     websiteLink: "https://siliconbrite.com",
   },
   {
     name: "Book Store",
     description:
-      "As an e-commerce site focusing on book shopping, Book Store aims to bring different types of books together with readers. Users can review and easily purchase the books they want through the site.",
+      "As an e-commerce site focusing on book shopping, Book Store aims to bring different types of books together with readers.",
     myRole:
-      "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
+      "I designed and developed this website from scratch as a way to learn and practice Remix.js. Every aspect of the site, from the design to the functionality, was built to showcase my skills and understanding of modern web development.",
     technologies: [
       {
         icon: 'remix',
@@ -57,10 +54,7 @@ export const projects = [
     ],
     image: BookStoreImage,
     color: "#f59e0b",
-    referance: {
-      name: "Umit Ahmet",
-      url: "https://umitahmed.com",
-    },
+    
     pageSpeedLink: "https://pagespeed.web.dev/report?url=https://remix-bookstore.vercel.app/",
     websiteLink: "https://remix-bookstore.vercel.app/",
   },
@@ -69,7 +63,7 @@ export const projects = [
     description:
       "Prome Solutions is a technology company that offers solutions in areas such as artificial intelligence, web and mobile applications. While optimizing the operations of businesses with AI-based systems, it also aims to improve the customer experience with user-friendly designs and Shopify integrations.",
     myRole:
-      "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
+      "While working at the company, I was responsible for managing the landing website. I regularly updated the site, making improvements and enhancements to keep it optimized and up-to-date.",
     technologies: [
       {
         icon: 'astro',
@@ -84,20 +78,17 @@ export const projects = [
     ],
     image: PromeSolutionsImage,
     color: "#2563eb",
-    referance: {
-      name: "Kaan Ikizler",
-      url: "https://promesolutions.com",
-    },
+    
     pageSpeedLink: "https://pagespeed.web.dev/report?url=https://promesolutions.com/",
     websiteLink: "https://promesolutions.com/",
   },
  
   {
-    name: "Uyduda",
+    name: "Baykara",
     description:
-      "Uyduda operates as a brand that provides technical services in satellite and television systems such as satellite dish installation, central satellite systems and television installation.",
+      "Baykara operates as a brand that provides technical services in satellite and television systems such as satellite dish installation, central satellite systems and television installation.",
     myRole:
-      "I worked as a front-end developer on this project, focusing on building interactive and user-friendly interfaces.",
+      "I was responsible for designing and developing this website entirely from scratch. The project involved creating a responsive and user-friendly interface, ensuring it met the client’s needs while optimizing for performance and usability.",
     technologies: [
       {
         icon: 'next',
@@ -112,10 +103,6 @@ export const projects = [
     ],
     image: UydudaImage,
     color: "#f59e0b",
-    referance: {
-      name: "Emre Kırca",
-      url: "https://emrekirca.com",
-    },
     pageSpeedLink: "https://pagespeed.web.dev/report?url=https://uyduda.com/",
     websiteLink: "https://uyduda.com/",
   },

@@ -44,7 +44,11 @@ import { Icon } from "astro-icon/components";
       </div>
 
       <div class="ml-auto flex items-center justify-end gap-3">
-        <Button className="max-lg:hidden">
+        <Button
+          download="UMIT_AHMET_CV.pdf"
+          href="/UMIT_AHMET_CV.pdf"
+          className="max-lg:hidden"
+        >
           Download CV <Icon name="download" class="size-4" />
         </Button>
         <ToggleTheme />
@@ -78,7 +82,7 @@ import { Icon } from "astro-icon/components";
     x-transition:leave-end="transform translate-x-full"
     x-init="$watch('showMenu', value => document.body.classList.toggle('overflow-hidden', value))"
     @click.away="showMenu = false"
-    class="fixed top-24 z-50 right-0 border-l max-w-[65%] h-full bg-white dark:bg-black border-b border-zinc-100 dark:border-zinc-900 w-full"
+    class="fixed top-24 -mt-2 z-50 right-0 border-l max-w-[65%] h-full bg-white dark:bg-black border-b border-zinc-100 dark:border-zinc-900 w-full"
   >
     <div
       class="flex items-start w-full divide-y divide-zinc-100 dark:divide-zinc-900 flex-col justify-center *:py-4"
@@ -86,7 +90,7 @@ import { Icon } from "astro-icon/components";
       <template x-for="(item, index) in navbarNavigation" :key="index">
         <a
           :href="item.href"
-          class="dark:text-white text-black ease-in-out opacity-0 w-full duration-500 text-pink- font-medium hover:bg-zinc-100 dark:hover:bg-zinc-900 dark:hover:text-zinc-300 default-container"
+          class="dark:text-white text-black ease-in-out opacity-0 w-full duration-200 text-pink- font-medium hover:bg-zinc-100 dark:hover:bg-zinc-900 dark:hover:text-zinc-300 default-container"
           :class="{ 'opacity-100': showMenu }"
           x-text="item.name"
           @click="showMenu = false"
@@ -95,7 +99,12 @@ import { Icon } from "astro-icon/components";
       </template>
 
       <div class="px-6 w-full">
-        <Button variant="secondary" className="w-full">
+        <Button
+          href="/UMIT_AHMET_CV.pdf"
+          download="UMIT_AHMET_CV.pdf"
+          variant="secondary"
+          className="w-full"
+        >
           Download CV <Icon name="download" class="size-4" />
         </Button>
       </div>

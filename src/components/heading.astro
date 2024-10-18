@@ -10,6 +10,14 @@ interface Props {
 }
 
 const { title, description, tag, textAlignment = "center" } = Astro.props;
+
+const formattedDescription = description
+  .split("<br/>")
+  .map(
+    (part) =>
+      `<p class="dark:text-zinc-400 text-zinc-500 mb-3 text-lg">${part.trim()}</p>`
+  )
+  .join("");
 ---
 
 <div
@@ -31,7 +39,5 @@ const { title, description, tag, textAlignment = "center" } = Astro.props;
   >
     {title}
   </h2>
-  <p class="dark:text-zinc-400 text-zinc-500 text-lg">
-    {description}
-  </p>
+  <div set:html={formattedDescription} />
 </div>

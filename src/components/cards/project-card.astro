@@ -13,10 +13,6 @@ interface Props {
   technologies: { icon: string; name: string; url: string }[];
   image: ImageMetadata;
   color: string;
-  referance: {
-    name: string;
-    url: string;
-  };
   websiteLink?: string;
   pageSpeedLink?: string;
 }
@@ -28,7 +24,6 @@ const {
   technologies,
   image,
   color,
-  referance,
   reversed,
   pageSpeedLink,
   websiteLink,
@@ -41,7 +36,7 @@ const {
     target="_blank"
     style=`background-color: ${color}`
     class={clsx(
-      "rounded-3xl max-sm:rounded-xl h-full overflow-hidden max-w-2xl",
+      "rounded-3xl max-sm:rounded-xl h-full max-lg:max-h-96 overflow-hidden lg:max-w-2xl",
       {
         "lg:order-2": reversed,
       }
@@ -50,14 +45,17 @@ const {
     <Image
       src={image}
       alt={name}
-      class="rounded-3xl max-sm:rounded-xl w-full h-full object-cover object-left-top relative sm:top-10 sm:left-10 top-6 left-6"
+      class="rounded-3xl max-sm:rounded-xl lg:w-full h-full object-cover object-left-top relative sm:top-10 sm:left-10 top-6 left-6"
     />
   </a>
 
   <div
-    class={clsx("max-lg:pt-6 space-y-6 text-start text-container", {
-      "lg:order-1": reversed,
-    })}
+    class={clsx(
+      "max-lg:pt-6 max-sm:text-center space-y-6 text-start text-container",
+      {
+        "lg:order-1": reversed,
+      }
+    )}
   >
     <!-- Project Info -->
     <div class="space-y-3">
@@ -77,7 +75,9 @@ const {
       <p class="dark:text-zinc-400 text-zinc-500 text-lg text-item">{myRole}</p>
     </div>
 
-    <div class="flex items-center justify-between gap-6 text-item">
+    <div
+      class="flex max-sm:flex-col items-center justify-between gap-6 text-item"
+    >
       <!-- Technologies used in this project -->
       <div class="flex gap-2 items-center">
         {
@@ -89,25 +89,27 @@ const {
         }
       </div>
 
-      <!-- Referance -->
-      <div>
-        <span class="dark:text-zinc-400 text-zinc-500 mr-1">Ref:</span>
-        <a
-          class="text-blue-500 font-medium underline hover:text-blue-600 duration-200"
-          href={referance.url}>{referance.name}</a
+      <!-- Page speed -->
+      <div class="text-item space-y-2">
+        <Button
+          href={pageSpeedLink}
+          className="max-sm:mx-auto"
+          variant="outline"
         >
+          <Icon name="link" class="size-5 rounded-md" />
+          Visit Website
+          <Icon name="arrow-up-right" />
+        </Button>
+        <Button
+          href={pageSpeedLink}
+          variant="outline"
+          className="max-sm:mx-auto"
+        >
+          <Icon name="page-speed" class="size-5 rounded-md" />
+          Check Page Speed
+          <Icon name="arrow-up-right" />
+        </Button>
       </div>
     </div>
-    {
-      pageSpeedLink && (
-        <div class="text-item">
-          <Button href={pageSpeedLink} variant="outline">
-            <Icon name="page-speed" class="size-5 rounded-md" />
-            Check Page Speed
-            <Icon name="arrow-up-right" />
-          </Button>
-        </div>
-      )
-    }
   </div>
 </div>

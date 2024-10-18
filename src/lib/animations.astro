@@ -15,7 +15,7 @@
     const words = text.split(" ");
 
     const splitText = words
-      .map((word) => {
+      .map((word: any) => {
         // Her kelimeyi segmenter ile harf harf ayırıyoruz
         const graphemes = Array.from(
           segmenter.segment(word),

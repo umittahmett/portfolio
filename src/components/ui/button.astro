@@ -7,6 +7,7 @@ interface Props {
   type?: "button" | "submit" | "reset";
   className?: string;
   ariaLabel?: string;
+  download?: string;
 }
 
 // Tailwind CSS classes
@@ -35,6 +36,7 @@ const {
   href,
   className,
   ariaLabel,
+  download,
 } = Astro.props;
 
 // Component Creation
@@ -43,6 +45,7 @@ const attributes = href ? { href } : { type, onclick };
 ---
 
 <Element
+  download={download}
   aria-label={ariaLabel}
   class:list={[
     baseClass,
