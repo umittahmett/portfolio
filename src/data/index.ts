@@ -153,16 +153,6 @@ export const contactLinks = [
     icon: 'github',
   },
   {
-    name: "Instagram",
-    url: 'https://instagram.com/umittahmett',
-    icon: 'instagram',
-  },
-  {
-    name: "Twitter",
-    url: 'https://x.com/umitahmed_',
-    icon: 'twitter',
-  },
-  {
     name: "Email",
     url: "mailto:umitahmet20@gmail.com",
     icon: 'mail',
