@@ -16,7 +16,7 @@ import { Icon } from "astro-icon/components";
   <div class="flex items-center justify-center gap-3">
     {
       contactLinks.map((item) => (
-        <Button size="icon" href={item.url}>
+        <Button ariaLabel={item.name} size="icon" href={item.url}>
           <Icon name={item.icon} class="size-4 dark:text-black text-white" />
         </Button>
       ))

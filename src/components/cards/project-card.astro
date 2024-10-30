@@ -83,7 +83,12 @@ const {
       <div class="flex gap-2 items-center">
         {
           technologies.map((tech) => (
-            <Button size="largeIcon" variant="secondary" href={tech.url}>
+            <Button
+              ariaLabel="technology"
+              size="largeIcon"
+              variant="secondary"
+              href={tech.url}
+            >
               <Icon name={tech.icon} class="size-6 " />
             </Button>
           ))
@@ -96,6 +101,7 @@ const {
           href={pageSpeedLink}
           className="max-sm:mx-auto"
           variant="outline"
+          ariaLabel="Visit Website"
         >
           <Icon name="link" class="size-5 rounded-md" />
           Visit Website
@@ -105,6 +111,7 @@ const {
           href={pageSpeedLink}
           variant="outline"
           className="max-sm:mx-auto"
+          ariaLabel="Check Page Speed"
         >
           <Icon name="page-speed" class="size-5 rounded-md" />
           Check Page Speed
