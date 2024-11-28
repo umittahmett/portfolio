@@ -7,7 +7,9 @@ import alpinejs from '@astrojs/alpinejs';
 
 import icon from 'astro-icon';
 
+import partytown from '@astrojs/partytown';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), alpinejs(), icon()]
+  integrations: [tailwind(), alpinejs(), icon(), partytown()]
 });

@@ -15,7 +15,7 @@ import Heading from "../heading.astro";
     {
       technologies.map((item, index) => (
         <TechnologyCard
-          className={clsx(index <= 1 ? "lg:col-span-3" : "lg:col-span-2")}
+          className="lg:col-span-2"
           {...item}
         />
       ))

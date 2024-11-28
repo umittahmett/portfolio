@@ -1,6 +1,7 @@
 import PromeSolutionsImage from "../assets/images/projects/prome-solutions.webp";
 import UydudaImage from "../assets/images/projects/uyduda.webp";
 import SiliconBriteImage from "../assets/images/projects/silicon-brite.webp";
+import FarkvarImage from "../assets/images/projects/farkvar.webp";
 import BookStoreImage from "../assets/images/projects/book-store.webp";
 
 
@@ -30,6 +31,29 @@ export const projects = [
     websiteLink: "https://siliconbrite.com",
   },
   {
+    name: "Farkvar",
+    description:
+      "Redesign of Farkvar Dashboard – Online Ticketing System",
+    myRole:
+      "As a frontend developer, I contributed to the redesign of the Farkvar online ticket purchasing system. My role involved translating Figma components into functional and responsive code, ensuring seamless functionality and an enhanced user experience. I focused on maintaining design accuracy while implementing key features to meet project requirements effectively.",
+      technologies: [
+        {
+          icon: 'react',
+          name: "React.JS",
+          url: "https://react.dev",
+        },
+        {
+          icon: 'tailwind',
+          name: "Tailwind css",
+          url: "https://tailwindcss.com",
+        },
+      ],
+    image: FarkvarImage,
+    color: "#ff4333",
+    
+    websiteLink: "https://staging.farkvar.com",
+  },
+  {
     name: "Book Store",
     description:
       "As an e-commerce site focusing on book shopping, Book Store aims to bring different types of books together with readers.",
@@ -55,7 +79,7 @@ export const projects = [
     image: BookStoreImage,
     color: "#f59e0b",
     
-    pageSpeedLink: "https://pagespeed.web.dev/report?url=https://remix-bookstore.vercel.app/",
+    // pageSpeedLink: "https://pagespeed.web.dev/report?url=https://remix-bookstore.vercel.app/",
     websiteLink: "https://remix-bookstore.vercel.app/",
   },
   {
@@ -82,7 +106,6 @@ export const projects = [
     pageSpeedLink: "https://pagespeed.web.dev/report?url=https://promesolutions.com/",
     websiteLink: "https://promesolutions.com/",
   },
- 
   {
     name: "Baykara",
     description:
@@ -110,25 +133,31 @@ export const projects = [
 
 export const technologies = [
   {
-    name: "React",
+    name: "React.js",
     icon: 'react',
     url: "https://reactjs.org",
     since: "Februar 2023",
   },
   {
-    name: "Next.JS",
+    name: "Vue.js",
+    icon: 'vue',
+    url: "https://vuejs.org",
+    since: "July 2023",
+  },
+  {
+    name: "Next.js",
     icon: 'next',
     url: "https://nextjs.org",
     since: "November 2023",
   },
   {
-    name: "Remix.JS",
+    name: "Remix.js",
     icon: 'remix',
     url: "https://remix.run",
     since: "July 2024",
   },
   {
-    name: "Astro.JS",
+    name: "Astro.js",
     icon: 'astro',
     url: "https://astro.build",
     since: "Februar 2024",
