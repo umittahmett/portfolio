@@ -183,7 +183,7 @@ export const contactLinks = [
   },
   {
     name: "Email",
-    url: "mailto:umitahmet20@gmail.com",
+    url: "mailto:umitahmet10@gmail.com",
     icon: 'mail',
   },
 ];
