@@ -47,8 +47,8 @@ import { Icon } from "astro-icon/components";
       <div class="ml-auto flex items-center justify-end gap-3">
         <Button
           ariaLabel="Download CV"
-          download="Umit_AHMET_Resume.pdf"
-          href="/Umit_AHMET_Resume.pdf"
+          download="Umit_AHMET_Frontend_Developer.pdf"
+          href="/Umit_AHMET_Frontend_Developer.pdf"
           className="max-lg:hidden"
         >
           Download CV <Icon name="download" class="size-4" />
@@ -86,6 +86,7 @@ import { Icon } from "astro-icon/components";
     x-init="$watch('showMenu', value => document.body.classList.toggle('overflow-hidden', value))"
     @click.away="showMenu = false"
     class="fixed top-24 -mt-2 z-50 right-0 border-l max-w-[65%] h-full bg-white dark:bg-black border-b border-zinc-100 dark:border-zinc-900 w-full"
+    x-cloak
   >
     <div
       class="flex items-start w-full divide-y divide-zinc-100 dark:divide-zinc-900 flex-col justify-center *:py-4"
@@ -104,8 +105,8 @@ import { Icon } from "astro-icon/components";
 
       <div class="px-6 w-full">
         <Button
-          href="/Umit_AHMET_Resume.pdf"
-          download="Umit_AHMET_Resume.pdf"
+          href="/Umit_AHMET_Frontend_Developer.pdf"
+          download="Umit_AHMET_Frontend_Developer.pdf"
           variant="secondary"
           className="w-full"
           ariaLabel="Download CV"
