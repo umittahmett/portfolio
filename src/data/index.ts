@@ -1,7 +1,7 @@
 import PromeSolutionsImage from "../assets/images/projects/prome-solutions.webp";
 import UydudaImage from "../assets/images/projects/uyduda.webp";
 import SiliconBriteImage from "../assets/images/projects/silicon-brite.webp";
-import FarkvarImage from "../assets/images/projects/farkvar.webp";
+import BiletcenterImage from "../assets/images/projects/biletcenter.webp";
 import BookStoreImage from "../assets/images/projects/book-store.webp";
 
 
@@ -31,11 +31,11 @@ export const projects = [
     websiteLink: "https://siliconbrite.com",
   },
   {
-    name: "Farkvar",
+    name: "Biletcenter",
     description:
-      "Redesign of Farkvar Dashboard – Online Ticketing System",
+      "Redesign of Biletcenter Dashboard – Online Ticketing System",
     myRole:
-      "As a frontend developer, I contributed to the redesign of the Farkvar online ticket purchasing system. My role involved translating Figma components into functional and responsive code, ensuring seamless functionality and an enhanced user experience. I focused on maintaining design accuracy while implementing key features to meet project requirements effectively.",
+      "As a frontend developer, I contributed to the redesign of the Biletcenter online ticket purchasing system. My role involved translating Figma components into functional and responsive code, ensuring seamless functionality and an enhanced user experience. I focused on maintaining design accuracy while implementing key features to meet project requirements effectively.",
       technologies: [
         {
           icon: 'react',
@@ -48,10 +48,10 @@ export const projects = [
           url: "https://tailwindcss.com",
         },
       ],
-    image: FarkvarImage,
+    image: BiletcenterImage,
     color: "#ff4333",
     
-    websiteLink: "https://staging.farkvar.com",
+    websiteLink: "https://biletcenter.com",
   },
   {
     name: "Book Store",

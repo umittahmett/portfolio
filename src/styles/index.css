@@ -17,4 +17,6 @@
 .split-text {
   white-space: normal; /* Kelimelerin doğru şekilde kırılması */
   word-break: break-word; /* Uzun kelimelerin taşmaması için */
-}
+} 
+
+[x-cloak] { display: none !important; }

@@ -61,11 +61,13 @@ import { Icon } from "astro-icon/components";
           @click="showMenu = !showMenu"
         >
           <Icon
+            x-cloak
             name="menu"
             x-show="showMenu == false"
             class="size-6 text-black dark:text-white"
           />
           <Icon
+            x-cloak
             name="x"
             x-show="showMenu == true"
             class="size-6 text-black dark:text-white"
@@ -76,6 +78,7 @@ import { Icon } from "astro-icon/components";
   </div>
   <!-- Mobile Menu -->
   <div
+    x-cloak
     x-show="showMenu"
     x-transition:enter="transition ease-out duration-200"
     x-transition:enter-start="transform translate-x-full"
@@ -85,8 +88,7 @@ import { Icon } from "astro-icon/components";
     x-transition:leave-end="transform translate-x-full"
     x-init="$watch('showMenu', value => document.body.classList.toggle('overflow-hidden', value))"
     @click.away="showMenu = false"
-    class="fixed top-24 -mt-2 z-50 right-0 border-l max-w-[65%] h-full bg-white dark:bg-black border-b border-zinc-100 dark:border-zinc-900 w-full"
-    x-cloak
+    class="fixed top-24 max-sm:-mt-2 z-50 right-0 border-l max-w-[65%] h-full bg-white dark:bg-black border-b border-zinc-100 dark:border-zinc-900 w-full md:hidden"
   >
     <div
       class="flex items-start w-full divide-y divide-zinc-100 dark:divide-zinc-900 flex-col justify-center *:py-4"
