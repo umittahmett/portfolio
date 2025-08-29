@@ -1,3 +1,7 @@
+
+
+
+
 ---
 import { Moon, Sun } from "lucide-astro";
 ---
@@ -18,31 +22,37 @@ import { Moon, Sun } from "lucide-astro";
 </button>
 
 <script is:inline>
-  document.addEventListener("alpine:init", () => {
-    Alpine.data("themeToggle", () => ({
-      init() {
-        this.setTheme();
-      },
-      setTheme() {
-        if (
-          localStorage.theme === "dark" ||
-          (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
-      },
-      toggleTheme() {
-        if (document.documentElement.classList.contains("dark")) {
-          document.documentElement.classList.remove("dark");
-          localStorage.theme = "light";
-        } else {
-          document.documentElement.classList.add("dark");
-          localStorage.theme = "dark";
-        }
-      },
-    }));
+  window.themeToggleStore = {
+    init() {
+      this.setTheme();
+    },
+    setTheme() {
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    },
+    toggleTheme() {
+      if (document.documentElement.classList.contains("dark")) {
+        document.documentElement.classList.remove("dark");
+        localStorage.theme = "light";
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.theme = "dark";
+      }
+    },
+  };
+
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('themeToggle', () => window.themeToggleStore);
   });
+
+  if (typeof Alpine !== 'undefined') {
+    Alpine.data('themeToggle', () => window.themeToggleStore);
+  }
 </script>
