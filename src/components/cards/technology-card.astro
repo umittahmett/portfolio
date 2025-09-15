@@ -7,12 +7,11 @@ import { Icon } from "astro-icon/components";
 interface Props {
   name: string;
   icon: any;
-  since: string;
   className?: string;
   url: string;
 }
 
-const { name, icon, since, className, url } = Astro.props;
+const { name, icon, className, url } = Astro.props;
 ---
 
 <a
@@ -27,7 +26,6 @@ const { name, icon, since, className, url } = Astro.props;
     class="flex relative max-sm:flex-col z-20 items-center justify-between sm:gap-6 font-semibold duration-200 text-sm text-black"
   >
     <span class="text-lg dark:text-white">{name}</span>
-    <span class="dark:text-zinc-200 text-zinc-700">Since {since}</span>
   </div>
 
   <Icon

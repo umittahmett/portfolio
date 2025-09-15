@@ -136,37 +136,31 @@ export const technologies = [
     name: "React.js",
     icon: 'react',
     url: "https://reactjs.org",
-    since: "Februar 2023",
   },
   {
     name: "Vue.js",
     icon: 'vue',
     url: "https://vuejs.org",
-    since: "July 2023",
   },
   {
     name: "Next.js",
     icon: 'next',
     url: "https://nextjs.org",
-    since: "November 2023",
   },
   {
     name: "Remix.js",
     icon: 'remix',
     url: "https://remix.run",
-    since: "July 2024",
   },
   {
     name: "Astro.js",
     icon: 'astro',
     url: "https://astro.build",
-    since: "Februar 2024",
   },
   {
     name: "Tailwind CSS",
     icon: 'tailwind',
     url: "https://tailwindcss.com",
-    since: "June 2023",
   },
 ];
 
