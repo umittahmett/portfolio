@@ -2,10 +2,34 @@ import PromeSolutionsImage from "../assets/images/projects/prome-solutions.webp"
 import UydudaImage from "../assets/images/projects/uyduda.webp";
 import SiliconBriteImage from "../assets/images/projects/silicon-brite.webp";
 import BiletcenterImage from "../assets/images/projects/biletcenter.webp";
+import DotDashImage from "../assets/images/projects/dot-dash.webp";
 import BookStoreImage from "../assets/images/projects/book-store.webp";
 
 
 export const projects = [
+  {
+    name: "Biletcenter",
+    description:
+      "Redesign of Biletcenter Dashboard – Online Ticketing System",
+    myRole:
+      "As a frontend developer, I contributed to the redesign of the Biletcenter online ticket purchasing system. My role involved translating Figma components into functional and responsive code, ensuring seamless functionality and an enhanced user experience. I focused on maintaining design accuracy while implementing key features to meet project requirements effectively.",
+      technologies: [
+        {
+          icon: 'react',
+          name: "React.JS",
+          url: "https://react.dev",
+        },
+        {
+          icon: 'tailwind',
+          name: "Tailwind css",
+          url: "https://tailwindcss.com",
+        },
+      ],
+    image: BiletcenterImage,
+    color: "#ff4333",
+    
+    websiteLink: "https://biletcenter.com",
+  },
   {
     name: "Silicon Brite",
     description:
@@ -29,29 +53,6 @@ export const projects = [
     
     pageSpeedLink: "https://pagespeed.web.dev/report?url=https://siliconbrite.com",
     websiteLink: "https://siliconbrite.com",
-  },
-  {
-    name: "Biletcenter",
-    description:
-      "Redesign of Biletcenter Dashboard – Online Ticketing System",
-    myRole:
-      "As a frontend developer, I contributed to the redesign of the Biletcenter online ticket purchasing system. My role involved translating Figma components into functional and responsive code, ensuring seamless functionality and an enhanced user experience. I focused on maintaining design accuracy while implementing key features to meet project requirements effectively.",
-      technologies: [
-        {
-          icon: 'react',
-          name: "React.JS",
-          url: "https://react.dev",
-        },
-        {
-          icon: 'tailwind',
-          name: "Tailwind css",
-          url: "https://tailwindcss.com",
-        },
-      ],
-    image: BiletcenterImage,
-    color: "#ff4333",
-    
-    websiteLink: "https://biletcenter.com",
   },
   {
     name: "Book Store",
@@ -105,6 +106,34 @@ export const projects = [
     
     pageSpeedLink: "https://pagespeed.web.dev/report?url=https://promesolutions.com/",
     websiteLink: "https://promesolutions.com/",
+  },
+  {
+    name: "Dot Dash",
+    description:
+      "Text and audio file to Morse code translator with real-time playback",
+    myRole:
+      "Developed the complete application as a solo developer, implementing the Morse code translation logic, Web Audio API integration for real-time audio playback, and user interface with Vue.js and TypeScript. Built the audio file processing backend with Python to extract and analyze Morse code patterns from uploaded audio files.",
+      technologies: [
+        {
+          icon: 'vue',
+          name: "Vue.JS",
+          url: "https://vuejs.org",
+        },
+        {
+          icon: 'tailwind',
+          name: "Tailwind css",
+          url: "https://tailwindcss.com",
+        },
+        {
+          icon: 'python',
+          name: "Python",
+          url: "https://python.org",
+        }
+      ],
+    image: DotDashImage,
+    color: "#9333ea",
+    
+    websiteLink: "https://dot-dash.vercel.app",
   },
   {
     name: "Baykara",
@@ -162,6 +191,11 @@ export const technologies = [
     icon: 'tailwind',
     url: "https://tailwindcss.com",
   },
+  {
+    name: 'Python',
+    icon: 'python',
+    url: 'https://python.org',
+  }
 ];
 
 export const contactLinks = [
