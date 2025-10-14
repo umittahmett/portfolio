@@ -133,7 +133,7 @@ export const projects = [
     image: DotDashImage,
     color: "#9333ea",
     
-    websiteLink: "https://dot-dash.vercel.app",
+    websiteLink: "https://dot-dash-app.vercel.app",
   },
   {
     name: "Baykara",
