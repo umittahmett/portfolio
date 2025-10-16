@@ -165,36 +165,43 @@ export const technologies = [
     name: "React.js",
     icon: 'react',
     url: "https://reactjs.org",
+    showInSection: true
   },
   {
     name: "Vue.js",
     icon: 'vue',
     url: "https://vuejs.org",
+    showInSection: true
   },
   {
     name: "Next.js",
     icon: 'next',
     url: "https://nextjs.org",
+    showInSection: true
   },
   {
     name: "Remix.js",
     icon: 'remix',
     url: "https://remix.run",
+    showInSection: true
   },
   {
     name: "Astro.js",
     icon: 'astro',
     url: "https://astro.build",
+    showInSection: true
   },
   {
     name: "Tailwind CSS",
     icon: 'tailwind',
     url: "https://tailwindcss.com",
+    showInSection: true
   },
   {
     name: 'Python',
     icon: 'python',
     url: 'https://python.org',
+    showInSection: false
   }
 ];
 
